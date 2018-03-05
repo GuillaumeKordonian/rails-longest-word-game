@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<% display_letters = [] %>
+<% @letters.split.each do |letter| %>
+  <% display_letters << "#{letter}, " %>
+<% end %>
+
+<p>Sorry but <strong><%= @word.upcase %></strong> can't be built out of <%= display_letters.join %></p>
+
+<%= @test_word %>
+<%= @test_letters %>
+
+<% link_to "play again", new_path %>
